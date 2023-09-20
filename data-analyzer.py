@@ -20,3 +20,15 @@ def basic_data_analysis(data):
         'descriptive_stats': data.describe(include='all').to_dict()
     }
     return results
+
+def generate_markdown_report(results):
+    """
+    Generate a summary report in Markdown format.
+    """
+    report = StringIO()
+    report.write("# Data Analysis Report\n\n")
+
+    report.write("## General Information\n\n")
+    report.write(f"- Number of rows: {results['number_of_rows']}\n")
+    report.write(f"- Number of columns: {results['number_of_columns']}\n")
+    report.write(f"- Column names: {', '.join(results['column_names'])}\n\n")
