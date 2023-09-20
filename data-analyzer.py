@@ -20,3 +20,9 @@ def basic_data_analysis(data):
         'descriptive_stats': data.describe(include='all').to_dict()
     }
     return results
+
+def generate_markdown_report(results):
+    """
+    Generate a summary report in Markdown format.
+    """
+    return None
